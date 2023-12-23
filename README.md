@@ -1,3 +1,5 @@
+# Notebook for Optimizers, Continual Learning. More detail content is presented in file report (.docx) 
+
 # I. Continual Learning (Học liên tục)
 *Continual Learning* (học liên tục) là quá trình cập nhật mô hình khi có dữ liệu mới; điều này giúp cho mô hình cập nhật khi có phát sinh dữ liệu theo thời gian thực. Với bất kì một mô hình học máy có giám sát nào, quá trình này đều có thể được áp dụng.
 
