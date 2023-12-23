@@ -6,10 +6,10 @@
 Lí do chủ yếu là để bắt kịp với sự thay đổi của dữ liệu, ví dụ như trường hợp sự thay đổi của dữ liệu là nhanh chóng và không đoán trước được; thu thập dữ liệu cho một sự kiện; thu thập dữ liệu cho đối tượng mới mà không hề có dữ liệu lịch sử liên quan.
 
 ## Các kiểu huấn luyện với Continual Learning
-### 1. Stateless retraining
+### 1. Huấn luyện bất trạng thái - Stateless retraining
 Thực hiện huấn luyện lại mô hình với trọng số khởi tạo ngẫu nhiên và dữ liệu mới. Đây là phương pháp thường được sử dụng. Ngoài ra, các dữ liệu cũ cũng có thể được tập hợp lại và thực hiện huấn luyện theo cách này để hiệu chỉnh mô hình.
 
-### 2. Stateful training (aka fine-tuning, incremental learning)
+### 2. Huấn luyện trạng thái - Stateful training (hay còn gọi là fine-tuning, incremental learning)
 Sử dụng trọng số rút ra từ lần huấn luyện trước đó và dữ liệu mới.
 
 ## Các thách thức
@@ -55,12 +55,12 @@ Sau cập nhật, mô hình cần phải được thử nghiệm để đảm b�
 
 ### 2. A/B Testing
 - **Ý tưởng:** Phân chia một cách ngẫu nhiên các request cho hai mô hình tạm gọi là A và B. Từ đó, so sánh đánh giá chúng (request nhận được của hai mô hình là khác nhau).
-- **Pros:**
+- **Ưu điểm:**
 	- Vì dự đoán được cung cấp cho người dùng nên kỹ thuật này cho phép bạn nắm bắt đầy đủ cách người dùng phản ứng với các mô hình khác nhau.
   - Thử nghiệm A/B rất dễ hiểu và có rất nhiều thư viện cũng như tài liệu xung quanh nó.
   - Chạy rất rẻ vì chỉ có một dự đoán cho mỗi yêu cầu.
   - Bạn sẽ không cần phải xem xét các trường hợp đặc biệt phát sinh từ các yêu cầu suy luận song song cho các chế độ dự đoán trực tuyến (xem nhược điểm của việc triển khai bóng).
-- **Cons:**
+- **Nhược điểm:**
 	- Kém an toàn hơn Shadow Deployment khi không thể chắc chắn được kết quả dự đoán trả ra có phải là tối ưu nhất hay không
 
 ### 3. Canary Release
